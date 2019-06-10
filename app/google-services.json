@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "265481082313",
+    "firebase_url": "https://duscadi.firebaseio.com",
+    "project_id": "duscadi",
+    "storage_bucket": "duscadi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265481082313:android:8fb362a023342d84",
+        "android_client_info": {
+          "package_name": "com.example.gs.buscadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265481082313-fkb231i9t82tison2fh3acbgan93rbq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gs.buscadi",
+            "certificate_hash": "0aea99247d07123a31992fb61b9889917e774a9b"
+          }
+        },
+        {
+          "client_id": "265481082313-6qkl4nt1s1lk7i9lhbpg72m8bk1hdk0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClWabUcz3EI2QCDl-81YVxCLLVzYXqbBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265481082313-6qkl4nt1s1lk7i9lhbpg72m8bk1hdk0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
