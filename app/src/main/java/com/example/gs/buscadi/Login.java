@@ -20,6 +20,7 @@ public class Login extends AppCompatActivity {
     private EditText editEmail,editSenha;
     private Button btLogar,btNovo;
 
+
             private FirebaseAuth auth;
 
 
