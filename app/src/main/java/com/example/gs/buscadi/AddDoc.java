@@ -12,10 +12,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AddDoc extends AppCompatActivity {
-    EditText editTextNome;
-    EditText editTextCpf;
-    EditText editTextContato;
-    Button btnAdd;
+    EditText etNome;
+    EditText etCpf;
+    EditText etContato;
+    Button butAdd;
 
     DatabaseReference databaseDoc;
 
@@ -26,12 +26,12 @@ public class AddDoc extends AppCompatActivity {
 
         databaseDoc = FirebaseDatabase.getInstance().getReference("Documentos");
 
-        editTextNome = (EditText) findViewById(R.id.editTextNome);
-        editTextCpf = (EditText) findViewById(R.id.editTextCpf);
-        editTextContato = (EditText) findViewById(R.id.editTextContato);
-        btnAdd = (Button) findViewById(R.id.btnAdd);
+        etNome = (EditText) findViewById(R.id.editTextNome);
+        etCpf = (EditText) findViewById(R.id.editTextCpf);
+        etContato = (EditText) findViewById(R.id.editTextContato);
+        butAdd = (Button) findViewById(R.id.btnAdd);
 
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        butAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addDoc();
@@ -40,11 +40,11 @@ public class AddDoc extends AppCompatActivity {
     }
 
     private void addDoc (){
-        String nome = editTextNome.getText().toString().trim();
-        String Cpf = editTextCpf.getText().toString().trim();
-        String Contato = editTextContato.getText().toString().trim();
+        String nome = etNome.getText().toString().trim();
+        String Cpf = etCpf.getText().toString().trim();
+        String Contato = etContato.getText().toString().trim();
 
-        if (!TextUtils.isEmpty(nome)||!TextUtils.isEmpty(nome) || !TextUtils.isEmpty(nome) ){
+        if (!TextUtils.isEmpty(nome)||!TextUtils.isEmpty(Cpf) || !TextUtils.isEmpty(Contato) ){
          String id = databaseDoc.push().getKey();
 
          Documento documento = new Documento(id, nome, Cpf, Contato);
