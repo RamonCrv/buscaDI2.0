@@ -42,7 +42,7 @@ public class Perfil extends AppCompatActivity {
         btadd.setOnClickListener(new View.OnClickListener(){
             @Override
             public void  onClick(View v){
-                Intent i = new Intent (getApplicationContext(),AddDoc.class);
+                Intent i = new Intent (getApplicationContext(),AddDocTest.class);
                 startActivity(i);
 
             }

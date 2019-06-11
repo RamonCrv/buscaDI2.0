@@ -11,7 +11,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddDoc extends AppCompatActivity {
+public class AddDocTest extends AppCompatActivity {
+
     EditText etNome;
     EditText etCpf;
     EditText etContato;
@@ -22,9 +23,9 @@ public class AddDoc extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_doc);
+        setContentView(R.layout.activity_add_doc_test);
 
-        databaseDoc = FirebaseDatabase.getInstance().getReference("Documentos");
+        databaseDoc = FirebaseDatabase.getInstance().getReference("Documento");
 
         etNome = (EditText) findViewById(R.id.editTextNome);
         etCpf = (EditText) findViewById(R.id.editTextCpf);
@@ -45,10 +46,10 @@ public class AddDoc extends AppCompatActivity {
         String Contato = etContato.getText().toString().trim();
 
         if (!TextUtils.isEmpty(nome)||!TextUtils.isEmpty(Cpf) || !TextUtils.isEmpty(Contato) ){
-         String id = databaseDoc.push().getKey();
+            String id = databaseDoc.push().getKey();
 
-         Documento documento = new Documento(id, nome, Cpf, Contato);
-         databaseDoc.child(id).setValue(documento);
+            Documento documento = new Documento(id, nome, Cpf, Contato);
+            databaseDoc.child(id).setValue(documento);
 
             Toast.makeText(this, "Documento adicionado", Toast.LENGTH_LONG).show();
         }else{
