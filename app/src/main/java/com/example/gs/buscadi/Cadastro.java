@@ -102,5 +102,6 @@ public class Cadastro extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         auth = Conexao.getFirebaseAuth();
+        finish();
     }
 }
