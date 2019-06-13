@@ -101,7 +101,7 @@ public class TestFind extends AppCompatActivity {
                          contatoAcha.setText("Contato de Quem o Encontrou:\n"+contAcha);
                          cpfDoDoc.setText("Numero do CPF Que Foi Encontrado:\n"+dataSnapshot.child(CpfTxt).child("cpf").getValue().toString());
                         nomeDoDoc.setText("Nome do Proprietario do Documeto:\n"+dataSnapshot.child(CpfTxt).child("nomeDoPro").getValue().toString());
-                         nomeAcha.setText("Nome de Quem Emcontrou:\n"+dataSnapshot.child(CpfTxt).child("nomeAcha").getValue().toString());
+                         nomeAcha.setText("Nome de Quem Enontrou:\n"+dataSnapshot.child(CpfTxt).child("nomeAcha").getValue().toString());
                         busc.setText("");
                     }
 
