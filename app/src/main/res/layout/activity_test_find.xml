@@ -36,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="CPF do Documento Perdido"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txtCpfID"

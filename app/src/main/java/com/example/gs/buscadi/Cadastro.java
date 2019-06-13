@@ -46,16 +46,16 @@ public class Cadastro extends AppCompatActivity {
 
 
 
-            btnRegistrar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String email = editEmail.getText().toString().trim();
-                    String senha = editSenha.getText().toString().trim();
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = editEmail.getText().toString().trim();
+                String senha = editSenha.getText().toString().trim();
 
-                    criarUser(email,senha);
-                }
-            });
-        }
+                criarUser(email,senha);
+            }
+        });
+    }
 
     private void criarUser(String email, String senha){
         auth.createUserWithEmailAndPassword(email,senha)
@@ -72,19 +72,19 @@ public class Cadastro extends AppCompatActivity {
 
                         }else{
                             alert("erro");
-                    }
-
-
-
-
                         }
+
+
+
+
+                    }
 
 
                 });
     }
-        private  void alert (String msg){
-            Toast.makeText(Cadastro.this,msg,Toast.LENGTH_SHORT).show();
-        }
+    private  void alert (String msg){
+        Toast.makeText(Cadastro.this,msg,Toast.LENGTH_SHORT).show();
+    }
 
 
 
@@ -102,6 +102,5 @@ public class Cadastro extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         auth = Conexao.getFirebaseAuth();
-        finish();
     }
 }

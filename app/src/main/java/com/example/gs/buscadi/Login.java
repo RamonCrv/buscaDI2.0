@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
     private Button btLogar,btNovo;
 
 
-            private FirebaseAuth auth;
+    private FirebaseAuth auth;
 
 
 
@@ -58,7 +58,6 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
                 if (task.isSuccessful()){
                     Intent i = new Intent(Login.this,Perfil.class);
                     startActivity(i);
@@ -75,10 +74,10 @@ public class Login extends AppCompatActivity {
 
     @SuppressLint("WrongViewCast")
     private void inicializarComponentes() {
-     editEmail = (EditText) findViewById(R.id.editLoginEmail);
-     editSenha = (EditText) findViewById(R.id.editLoginSenha);
-     btLogar = (Button) findViewById(R.id.btnLoginLogar);
-     btNovo =  (Button) findViewById(R.id.btnLoginNovo);
+        editEmail = (EditText) findViewById(R.id.editLoginEmail);
+        editSenha = (EditText) findViewById(R.id.editLoginSenha);
+        btLogar = (Button) findViewById(R.id.btnLoginLogar);
+        btNovo =  (Button) findViewById(R.id.btnLoginNovo);
 
 
     }
@@ -90,4 +89,3 @@ public class Login extends AppCompatActivity {
 
     }
 }
-
