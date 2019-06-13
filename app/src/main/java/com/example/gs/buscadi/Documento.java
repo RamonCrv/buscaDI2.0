@@ -2,20 +2,40 @@ package com.example.gs.buscadi;
 
 public class Documento {
 
-    String DocId;
-    String nomeDoPro;
-    String cpf;
-    String contatoDoAcha;
+   private String DocId;
+    private String nomeDoPro;
+    private String cpf;
+    private String contatoDoAcha;
+    private String IdUsuario;
+    private String EmailDoAcho;
+    private  String nomeAcha;
+
+
+
+    public String getEmailDoAcho() {
+        return EmailDoAcho;
+    }
 
     public  Documento (){
 
     }
 
-    public Documento(String docId, String nomeDoPro, String cpf, String contatoDoAcha) {
+    public String getIdUsuario() {
+        return IdUsuario;
+    }
+
+    public Documento(String docId, String nomeDoPro, String cpf, String contatoDoAcha, String idUsuario, String emailDoAcho, String nomeAcha ) {
         DocId = docId;
-        this.nomeDoPro = nomeDoPro;
         this.cpf = cpf;
         this.contatoDoAcha = contatoDoAcha;
+        IdUsuario = idUsuario;
+        EmailDoAcho = emailDoAcho;
+        this.nomeDoPro = nomeDoPro;
+        this.nomeAcha = nomeAcha;
+    }
+
+    public String getNomeAcha() {
+        return nomeAcha;
     }
 
     public String getDocId() {
@@ -32,5 +52,9 @@ public class Documento {
 
     public String getContatoDoAcha() {
         return contatoDoAcha;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        IdUsuario = idUsuario;
     }
 }
