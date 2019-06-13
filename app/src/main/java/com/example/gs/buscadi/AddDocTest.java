@@ -39,6 +39,8 @@ public class AddDocTest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addDoc();
+
+
             }
         });
     }
@@ -57,6 +59,7 @@ public class AddDocTest extends AppCompatActivity {
             Documento documento;
             documento = new Documento(id, nome, Cpf, Contato, userId, userEmail, nomeAcha);
             databaseDoc.child(Cpf).setValue(documento);
+            finish();
 
             Toast.makeText(this, "Documento adicionado", Toast.LENGTH_LONG).show();
         }else{

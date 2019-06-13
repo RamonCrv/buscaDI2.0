@@ -62,6 +62,7 @@ public class TestFind extends AppCompatActivity {
                 cpfDoDoc.setText("");
                 contatoAcha.setText("");
                 nomeDoDoc.setText("");
+                nomeAcha.setText("");
                 BuscarDoc();
 
             }
@@ -96,10 +97,10 @@ public class TestFind extends AppCompatActivity {
                         alerto.setText("Não achoy");
                     }else{
                          contatoAcha.setText(dataSnapshot.child(CpfTxt).child("contatoDoAcha").getValue().toString());
-                         contatoAcha.setText("Contato de Quem o Encontrou : "+contAcha);
-                         cpfDoDoc.setText("Numero do CPF Que Foi Encontrado : "+dataSnapshot.child(CpfTxt).child("cpf").getValue().toString());
-                        nomeDoDoc.setText("Nome do Proprietario do Documeto : "+dataSnapshot.child(CpfTxt).child("nomeDoPro").getValue().toString());
-                         nomeAcha.setText("Nome de Quem Emcontrou : "+dataSnapshot.child(CpfTxt).child("nomeAcha").getValue().toString());
+                         contatoAcha.setText("Contato de Quem o Encontrou:\n"+contAcha);
+                         cpfDoDoc.setText("Numero do CPF Que Foi Encontrado:\n"+dataSnapshot.child(CpfTxt).child("cpf").getValue().toString());
+                        nomeDoDoc.setText("Nome do Proprietario do Documeto:\n"+dataSnapshot.child(CpfTxt).child("nomeDoPro").getValue().toString());
+                         nomeAcha.setText("Nome de Quem Emcontrou:\n"+dataSnapshot.child(CpfTxt).child("nomeAcha").getValue().toString());
 
                     }
 

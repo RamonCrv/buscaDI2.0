@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/papeldeparede"
     tools:context=".FindDoc">
 
     <LinearLayout
@@ -22,18 +23,28 @@
             android:layout_height="417dp"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
             <EditText
                 android:id="@+id/editBusc"
                 android:layout_width="match_parent"
-                android:layout_height="61dp"
+                android:layout_height="59dp"
                 android:ems="10"
                 android:hint="CPF do Documento Perdido"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCpfID"
                 android:layout_width="match_parent"
                 android:layout_height="53dp"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -41,6 +52,7 @@
                 android:id="@+id/txtProplD"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -48,6 +60,7 @@
                 android:id="@+id/txtContatoID"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -55,6 +68,7 @@
                 android:id="@+id/nomeDoProID"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -65,9 +79,9 @@
 
                 <Button
                     android:id="@+id/btnBuscarFD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pesquisar" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:background="@drawable/pesquisarbut" />
 
             </LinearLayout>
 
@@ -75,6 +89,7 @@
                 android:id="@+id/txtAlertalD"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 

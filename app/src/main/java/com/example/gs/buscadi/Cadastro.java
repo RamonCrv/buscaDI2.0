@@ -19,6 +19,8 @@ public class Cadastro extends AppCompatActivity {
 
     private EditText editEmail,editSenha;
     private Button btnRegistrar,btnVoltar;
+    private EditText nomeCad;
+    private EditText telefoneCad;
     private FirebaseAuth auth;
 
 
@@ -49,6 +51,7 @@ public class Cadastro extends AppCompatActivity {
                 public void onClick(View v) {
                     String email = editEmail.getText().toString().trim();
                     String senha = editSenha.getText().toString().trim();
+
                     criarUser(email,senha);
                 }
             });
@@ -56,6 +59,7 @@ public class Cadastro extends AppCompatActivity {
 
     private void criarUser(String email, String senha){
         auth.createUserWithEmailAndPassword(email,senha)
+
                 .addOnCompleteListener(Cadastro.this, new OnCompleteListener<AuthResult>() {
 
                     @Override
@@ -87,6 +91,8 @@ public class Cadastro extends AppCompatActivity {
     private void inicializarComponentes() {
         editEmail = (EditText) findViewById(R.id.editCadastroEmail);
         editSenha = (EditText) findViewById(R.id.editCadastroSenha);
+
+
         btnRegistrar = (Button) findViewById(R.id.btnCadastroLogar);
         btnVoltar =  (Button) findViewById(R.id.btnCadastroVoltar);
 
