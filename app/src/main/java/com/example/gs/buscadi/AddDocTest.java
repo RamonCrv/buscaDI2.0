@@ -26,7 +26,6 @@ public class AddDocTest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_doc_test);
-
         databaseDoc = FirebaseDatabase.getInstance().getReference("Documento");
         etNome = (EditText) findViewById(R.id.editTextNome);
         etCpf = (EditText) findViewById(R.id.editTextCpf);

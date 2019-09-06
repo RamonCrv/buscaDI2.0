@@ -95,7 +95,7 @@ public class TestFind extends AppCompatActivity {
 
                     if(contAcha == null){
 
-                        alerto.setText("Não achoy");
+                        alerto.setText("Não achou");
                     }else{
                          contatoAcha.setText(dataSnapshot.child(CpfTxt).child("contatoDoAcha").getValue().toString());
                          contatoAcha.setText("Contato de Quem o Encontrou:\n"+contAcha);
